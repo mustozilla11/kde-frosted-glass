@@ -1,0 +1,2 @@
+#!/bin/sh
+export KWIN_DRM_NO_DIRECT_SCANOUT=1

@@ -1,0 +1,28 @@
+[General]
+Order=native-glass,apple-glass-all,steam
+
+[apple-glass-all]
+Description=Apple Liquid Glass System-Wide
+opacityactive=68
+opacityactiverule=2
+opacityinactive=60
+opacityinactiverule=2
+types=9
+wmclass=
+wmclassmatch=0
+
+[native-glass]
+Description=Browsers, Video & Screenshot Tools (Keep Web/Video Content 100% Opaque)
+opacityactive=100
+opacityactiverule=2
+opacityinactive=100
+opacityinactiverule=2
+types=9
+wmclass=^(vlc|mpv|org\\.kde\\.spectacle|spectacle|flameshot|firefox|firefox-esr|librewolf|zen|zen-bin|waterfox|brave-browser|chromium|google-chrome|vivaldi-stable|microsoft-edge)$
+wmclasscomplete=false
+wmclassmatch=3
+
+[steam]
+Description=Steam
+wmclass=steam
+wmclassmatch=1

@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "KWin/Effect",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Frosted Glass Guard"
+            }
+        ],
+        "Category": "Appearance",
+        "Description": "Blocks KMS direct scanout and overlay plane splitting so KWin always composites frosted glass blur behind windows",
+        "EnabledByDefault": true,
+        "Id": "frosted_scanout_guard",
+        "License": "GPL-2.0-or-later",
+        "Name": "Frosted Glass Scanout Guard"
+    },
+    "X-KDE-Ordering": 95,
+    "X-Plasma-API": "javascript"
+}
