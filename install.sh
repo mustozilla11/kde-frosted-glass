@@ -121,24 +121,39 @@ if command -v kwriteconfig6 >/dev/null 2>&1; then
     kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight "IAX"
     kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft ""
     kwriteconfig6 --file kwinrc --group Plugins --key frosted_scanout_guardEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key magiclampEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key maximizeEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key fullscreenEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key sheetEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key slidebackEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key scaleEnabled true
+    kwriteconfig6 --file kwinrc --group Plugins --key squashEnabled false
+    kwriteconfig6 --file kwinrc --group Effect-magiclamp --key AnimationDuration 220
+    kwriteconfig6 --file kwinrc --group Effect-scale --key Duration 180
+    kwriteconfig6 --file kwinrc --group Effect-scale --key InScale "0.92"
+    kwriteconfig6 --file kwinrc --group Effect-scale --key OutScale "0.92"
+    kwriteconfig6 --file kdeglobals --group KDE --key AnimationDurationFactor "0.7071067811865475"
 
     # Check for better-blur-dx or fallback to native blur
     if [ -f /usr/lib/qt6/plugins/kwin/effects/plugins/better_blur_dx.so ] || pacman -Qq kwin-effects-better-blur-dx >/dev/null 2>&1; then
-        info "Found better_blur_dx effect. Applying optimized Liquid Glass blur profile..."
+        info "Found better_blur_dx effect. Applying optimized macOS Sequoia Vibrancy profile..."
         kwriteconfig6 --file kwinrc --group Plugins --key better_blur_dxEnabled true
         kwriteconfig6 --file kwinrc --group Plugins --key blurEnabled false
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlitMode "RENDER_TARGET"
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurCacheIgnore false
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurCacheRateLimit 30
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurDecorations true
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurDocks true
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurMenus true
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurNonMatching true
-        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurStrength 6
-        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key Brightness 112
-        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key Contrast 108
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key BlurStrength 8
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key Brightness 103
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key Contrast 106
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key CornerRadius "12.0"
         kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key ForceContrastParams true
-        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key NoiseStrength 2
-        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key Saturation 210
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key NoiseStrength 1
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key Saturation 165
+        kwriteconfig6 --file kwinrc --group Effect-better-blur-dx --key WindowClasses $'vlc\nmpv\norg.kde.spectacle\nspectacle\nflameshot\nfirefox\nfirefox-esr\nlibrewolf\nzen\nzen-bin\nwaterfox\nbrave-browser\nchromium\ngoogle-chrome\nvivaldi-stable\nmicrosoft-edge\nsteam'
     else
         info "Configuring KDE Plasma native blur effect..."
         kwriteconfig6 --file kwinrc --group Plugins --key blurEnabled true

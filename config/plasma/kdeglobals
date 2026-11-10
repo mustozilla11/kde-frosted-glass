@@ -137,7 +137,7 @@ ColorScheme=WhiteSurLiquidDark
 ColorSchemeHash=cb36b435ec951c845a56d77ad2daadbd4f46b63b
 
 [KDE]
-AnimationDurationFactor=0.25
+AnimationDurationFactor=0.7071067811865475
 LookAndFeelPackage=com.github.vinceliuice.MacSequoia-Dark
 contrast=4
 frameContrast=0.2

@@ -3,9 +3,9 @@ Order=native-glass,apple-glass-all,steam
 
 [apple-glass-all]
 Description=Apple Liquid Glass System-Wide
-opacityactive=68
+opacityactive=85
 opacityactiverule=2
-opacityinactive=60
+opacityinactive=78
 opacityinactiverule=2
 types=9
 wmclass=
