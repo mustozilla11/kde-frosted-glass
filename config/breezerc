@@ -1,0 +1,9 @@
+[Windeco]
+ButtonSize=ButtonMedium
+DrawBackgroundGradient=false
+DrawBorderOnMaximizedWindows=false
+DrawOutline=true
+OutlineCloseButton=false
+ShadowSize=ShadowLarge
+ShadowStrength=180
+TitleAlignment=AlignCenter
