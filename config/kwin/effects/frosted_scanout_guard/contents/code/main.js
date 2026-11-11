@@ -18,7 +18,19 @@ var frostedScanoutGuard = {
         "mpv": true,
         "spectacle": true,
         "org.kde.spectacle": true,
-        "flameshot": true
+        "flameshot": true,
+        "steam": true,
+        "firefox": true,
+        "firefox-esr": true,
+        "librewolf": true,
+        "zen": true,
+        "zen-bin": true,
+        "waterfox": true,
+        "brave-browser": true,
+        "chromium": true,
+        "google-chrome": true,
+        "vivaldi-stable": true,
+        "microsoft-edge": true
     },
 
     isExcluded: function (w) {

@@ -116,10 +116,24 @@ success "Kvantum and GTK configs applied."
 if command -v kwriteconfig6 >/dev/null 2>&1; then
     info "Configuring Plasma 6 theme and window decorations..."
     kwriteconfig6 --file plasmarc --group Theme --key name "WhiteSurLiquid-dark"
-    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key library "org.kde.kwin.aurorae.v2"
-    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme "__aurorae__svg__WhiteSurLiquid-dark"
+    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key library "org.kde.breeze"
+    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme --delete
+    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key BorderSize "None"
+    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key BorderSizeAuto "false"
     kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight "IAX"
     kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft ""
+    kwriteconfig6 --file breezerc --group Windeco --key ButtonSize "ButtonMedium"
+    kwriteconfig6 --file breezerc --group Windeco --key DrawBackgroundGradient "false"
+    kwriteconfig6 --file breezerc --group Windeco --key DrawBorderOnMaximizedWindows "false"
+    kwriteconfig6 --file breezerc --group Windeco --key DrawOutline "true"
+    kwriteconfig6 --file breezerc --group Windeco --key OutlineCloseButton "false"
+    kwriteconfig6 --file breezerc --group Windeco --key ShadowSize "ShadowLarge"
+    kwriteconfig6 --file breezerc --group Windeco --key ShadowStrength "180"
+    kwriteconfig6 --file breezerc --group Windeco --key TitleAlignment "AlignCenter"
+    kwriteconfig6 --file kdeglobals --group WM --key activeBackground "22,22,26,185"
+    kwriteconfig6 --file kdeglobals --group WM --key inactiveBackground "18,18,22,165"
+    kwriteconfig6 --file kdeglobals --group WM --key activeForeground "245,245,247"
+    kwriteconfig6 --file kdeglobals --group WM --key inactiveForeground "160,160,168"
     kwriteconfig6 --file kwinrc --group Plugins --key frosted_scanout_guardEnabled true
     kwriteconfig6 --file kwinrc --group Plugins --key magiclampEnabled true
     kwriteconfig6 --file kwinrc --group Plugins --key maximizeEnabled true
